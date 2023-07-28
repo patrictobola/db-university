@@ -8,7 +8,7 @@ SELECT * FROM `courses` WHERE `cfu` > 10;
 
 -- 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
-SELECT *, DATE_ADD(NOW(), INTERVAL -30 YEAR) AS `now` FROM `students` HAVING DATE(`date_of_birth`) < DATE(`now`); 
+SELECT *, DATE_ADD(NOW(), INTERVAL -30 YEAR) AS `now` FROM `students` HAVING DATE(`date_of_birth`) <= DATE(`now`); 
 
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
